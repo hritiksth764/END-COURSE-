@@ -1,5 +1,5 @@
 # ASSIGNMENT_01 # 
-1. What is a neural network neuron?
+# 1. What is a neural network neuron?
 
 **Neuron:**
 
