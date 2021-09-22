@@ -36,17 +36,32 @@ Generally, a large learning rate allows the model to learn faster, at the cost o
 At extremes, a learning rate that is too large will result in weight updates that will be too large and the performance of the model (such as its loss on the training dataset) will oscillate over training epochs. Oscillating performance is said to be caused by weights that diverge (are divergent). A learning rate that is too small may never converge or may get stuck on a suboptimal solution.
 
 # 3. How are weights initialized?
+
 The nodes in neural networks are composed of parameters referred to as weights used to calculate a weighted sum of the inputs.
 Neural network models are fit using an optimization algorithm called **stochastic gradient descent** that incrementally changes the network weights to minimize a loss function, hopefully resulting in a set of weights for the mode that is capable of making useful predictions.
+
 This optimization algorithm requires a starting point in the space of possible weight values from which to begin the optimization process. Weight initialization is a procedure to set the weights of a neural network to small random values that define the starting point for the optimization (learning or training) of the neural network model.
 
 # 4. What is "loss" in a neural network?
+
 Loss is nothing but the prediction error of the neural network.
 Typically, with neural networks, we seek to minimize the error. As such, the objective function is often referred to as a cost function or a loss function and the value calculated by the loss function is referred to as simply **“loss.”**
 ‘Loss’ helps us to understand how much the predicted value differ from actual value.
 Function used to calculate the loss is called as “Loss function”
 
-**Types of Loss Functions**
+**Types of Loss Functions:** 
+
 Loss functions are mainly classified into two different categories that are **Classification loss** and **Regression Loss**. 
+
 **Classification loss** is the case where the aim is to predict the output from the different categorical values for example, if we have a dataset of handwritten images and the digit is to be predicted that lies between (0-9), in these kinds of scenarios classification loss is used.
 Whereas if the problem is regression like predicting the continuous values for example, if need to predict the weather conditions or predicting the prices of houses on the basis of some features. In this type of case, **Regression Loss** is used. 
+
+# 5. What is the "chain rule" in gradient flow?
+Gradient Flow Calculus is the set of rules used by the Backprop algorithm to compute gradients (this also accounts for the use of the term “flow” in tools such as Tensor Flow). Backprop works by first computing the gradients ∂l/∂yk,i≤k≤K at the output of the network (which can be computed using an explicit formula), then propagating or flowing these gradients back into the network.
+
+Using the Chain Rule of Differentiation, the gradients ∂l/∂x and ∂l/∂y can be computed as:
+
+		∂l/∂x=∂l/∂z.∂z/∂x
+		∂l/∂y=∂l/dz.∂z/∂y
+
+This rule can be used to compute the effect of the node on the gradients flowing back from right to left. 
