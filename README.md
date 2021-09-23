@@ -28,7 +28,7 @@ We update any weight using this equation:
 
 						      𝑤(𝑛𝑒𝑤) = 𝑤(𝑜𝑙𝑑) − 𝐿𝑅(∂𝐸𝑟𝑟𝑜𝑟/∂𝑤(𝑜𝑙𝑑))
               
-## Effect of Learning Rate:
+## Use of Learning Rate:
 The **learning rate** hyperparameter controls the rate or speed at which the model learns. 
 Specifically, it controls the amount of apportioned error that the weights of the model are updated with each time they are updated, such as at the end of each batch of training examples.
 Given a perfectly configured learning rate, the model will learn to best approximate the function given available resources (the number of layers and the number of nodes per layer) in a given number of training epochs (passes through the training data).
